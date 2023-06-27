@@ -7,15 +7,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.Login.AccountDTO;
 import com.example.myapplication.databinding.ItemProfileMenuRecvBinding;
+
+import java.util.ArrayList;
 
 public class ProfileRecv1Adapter extends RecyclerView.Adapter<ProfileRecv1Adapter.ViewHolder> {
 
     ItemProfileMenuRecvBinding binding;
 
-    public ProfileRecv1Adapter(ItemProfileMenuRecvBinding binding) {
-        this.binding = binding;
-    }
+
+    //  어떤 경우에 생성자가 필요할까 ? yes ArrayList
+
 
     @NonNull
     @Override
