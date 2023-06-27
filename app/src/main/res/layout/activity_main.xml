@@ -19,51 +19,51 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="Home"
             android:textColor="@color/black"
             android:textSize="30dp"
-            android:textStyle="bold"
-            android:layout_margin="10dp"/>
+            android:textStyle="bold" />
+
         <SearchView
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:queryHint="Search GitHub"
+            android:layout_margin="10dp"
             android:background="#E0E0E5"
-            />
+            android:queryHint="Search GitHub" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp">
 
-        <TextView
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="My Work"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_margin="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                android:text="My Work"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/baseline_more_horiz_24"
-                android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="10dp"/>
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/baseline_more_horiz_24" />
 
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="#FEFEFE"
-            android:orientation="vertical"
-            android:layout_margin="10dp">
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -72,36 +72,37 @@
 
                 <ImageView
                     android:id="@+id/imgv_issues"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_margin="10dp"
                     android:layout_toEndOf="@id/imgv_issues"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Issues"/>
+                    android:text="Issues"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
 
                 <ImageView
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/baseline_keyboard_arrow_right_24"/>
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#EEEFF3"/>
+                    android:background="#EEEFF3" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
@@ -109,12 +110,12 @@
 
                 <ImageView
                     android:id="@+id/imgv_pull_requests"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -130,18 +131,19 @@
                     android:textSize="20dp" />
 
                 <ImageView
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/baseline_keyboard_arrow_right_24"/>
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#EEEFF3"/>
+                    android:background="#EEEFF3" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
@@ -149,12 +151,12 @@
 
                 <ImageView
                     android:id="@+id/imgv_discussions"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -170,18 +172,19 @@
                     android:textSize="20dp" />
 
                 <ImageView
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/baseline_keyboard_arrow_right_24"/>
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#EEEFF3"/>
+                    android:background="#EEEFF3" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
@@ -189,12 +192,12 @@
 
                 <ImageView
                     android:id="@+id/imgv_repositories"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -210,18 +213,19 @@
                     android:textSize="20dp" />
 
                 <ImageView
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/baseline_keyboard_arrow_right_24"/>
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#EEEFF3"/>
+                    android:background="#EEEFF3" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
@@ -229,12 +233,12 @@
 
                 <ImageView
                     android:id="@+id/imgv_organizations"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -250,18 +254,19 @@
                     android:textSize="20dp" />
 
                 <ImageView
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/baseline_keyboard_arrow_right_24"/>
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#EEEFF3"/>
+                    android:background="#EEEFF3" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
@@ -269,12 +274,12 @@
 
                 <ImageView
                     android:id="@+id/imgv_starred"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -290,21 +295,20 @@
                     android:textSize="20dp" />
 
                 <ImageView
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/baseline_keyboard_arrow_right_24"/>
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#EEEFF3"/>
+                    android:background="#EEEFF3" />
 
             </RelativeLayout>
 
         </LinearLayout>
-
 
 
     </LinearLayout>
