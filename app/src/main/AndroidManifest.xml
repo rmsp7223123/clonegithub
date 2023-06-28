@@ -13,6 +13,18 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Home.HomeMoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.HomeIssuesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.HomeSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.HomePlusActivity"
+            android:exported="false" />
+        <activity
             android:name=".Login.LoginActivity"
             android:exported="false" />
         <activity
