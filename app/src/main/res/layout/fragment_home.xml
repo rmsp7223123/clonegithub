@@ -23,44 +23,63 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Home"
-                    android:textColor="@color/black"
-                    android:textSize="30dp"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.SearchView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:background="#EAEAEA"
-                    app:defaultQueryHint="Search GitHub"
-                    app:iconifiedByDefault="false" />
-
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp">
+                    android:layout_height="100dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Home"
+                        android:textColor="@color/black"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgv_plus"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/home_plus" />
+
+                </RelativeLayout>
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/sv_search"
+                    android:layout_margin="10dp"
+                    android:background="#EAEAEA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconifiedByDefault="false"
+                    app:queryHint="Search GitHub"
+                    />
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="10dp"
                         android:text="My Work"
                         android:textColor="@color/black"
-                        android:textSize="20dp"
+                        android:textSize="22dp"
                         android:textStyle="bold" />
 
                     <ImageView
+                        android:id="@+id/imgv_more"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -73,17 +92,16 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    app:cardCornerRadius="10dp">
-
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="10dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:background="#FEFEFE"
                         android:orientation="vertical">
 
                         <RelativeLayout
+                            android:id="@+id/issues"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -95,7 +113,7 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentBottom="true"
-                                android:src="@mipmap/ic_launcher" />
+                                android:src="@drawable/home_issues" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -116,8 +134,14 @@
 
 
                         </RelativeLayout>
+                        <View
+                            android:layout_marginStart="60dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEEFF3" />
 
                         <RelativeLayout
+                            android:id="@+id/pull_requests"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -129,7 +153,7 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentBottom="true"
-                                android:src="@mipmap/ic_launcher" />
+                                android:src="@drawable/home_pull_requests" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -151,14 +175,15 @@
                                 android:layout_centerVertical="true"
                                 android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#EEEFF3" />
-
                         </RelativeLayout>
+                        <View
+                            android:layout_marginStart="60dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEEFF3" />
 
                         <RelativeLayout
+                            android:id="@+id/discussions"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -170,7 +195,7 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentBottom="true"
-                                android:src="@mipmap/ic_launcher" />
+                                android:src="@drawable/home_discussions" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -192,14 +217,15 @@
                                 android:layout_centerVertical="true"
                                 android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#EEEFF3" />
-
                         </RelativeLayout>
+                        <View
+                            android:layout_marginStart="60dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEEFF3" />
 
                         <RelativeLayout
+                            android:id="@+id/repositories"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -211,7 +237,7 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentBottom="true"
-                                android:src="@mipmap/ic_launcher" />
+                                android:src="@drawable/home_repositories" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -233,14 +259,15 @@
                                 android:layout_centerVertical="true"
                                 android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#EEEFF3" />
-
                         </RelativeLayout>
 
+                        <View
+                            android:layout_marginStart="60dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEEFF3" />
                         <RelativeLayout
+                            android:id="@+id/organizations"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -252,7 +279,7 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentBottom="true"
-                                android:src="@mipmap/ic_launcher" />
+                                android:src="@drawable/home_organizations" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -274,14 +301,15 @@
                                 android:layout_centerVertical="true"
                                 android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#EEEFF3" />
-
                         </RelativeLayout>
+                        <View
+                            android:layout_marginStart="60dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEEFF3" />
 
                         <RelativeLayout
+                            android:id="@+id/starred"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -293,7 +321,7 @@
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentBottom="true"
-                                android:src="@mipmap/ic_launcher" />
+                                android:src="@drawable/home_starred" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -315,36 +343,29 @@
                                 android:layout_centerVertical="true"
                                 android:src="@drawable/baseline_keyboard_arrow_right_24" />
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#EEEFF3" />
-
                         </RelativeLayout>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <RelativeLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="10dp"
                         android:text="Favorites"
                         android:textColor="@color/black"
-                        android:textSize="20dp"
+                        android:textSize="22dp"
                         android:textStyle="bold" />
 
                     <ImageView
+                        android:id="@+id/imgv_favorites_more"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -355,45 +376,47 @@
                 </RelativeLayout>
 
                 <androidx.cardview.widget.CardView
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     app:cardCornerRadius="10dp">
 
                     <LinearLayout
+                        android:gravity="center"
+                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:gravity="center"
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:text="Add favorite repositories here to have quick access at any time, without having to search"
+                            android:textSize="15dp"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="15dp" />
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add favorite repositories here to have quick access at any time, without having to search"
+                            />
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="10dp">
-
                             <FrameLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/border_box">
+                                android:background="@drawable/border_box"
+                                >
 
                                 <TextView
+                                    android:id="@+id/tv_add_favorites"
+                                    android:layout_margin="10dp"
+                                    android:layout_gravity="center"
+                                    android:textStyle="bold"
+                                    android:textColor="#2A63CD"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="10dp"
-                                    android:text="@string/your_text_reference1"
-                                    android:textColor="#2A63CD"
-                                    android:textStyle="bold" />
+                                    android:text="@string/your_text_reference1"/>
 
                             </FrameLayout>
                         </androidx.cardview.widget.CardView>
@@ -402,25 +425,23 @@
                 </androidx.cardview.widget.CardView>
 
                 <RelativeLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="10dp"
                         android:text="Shortcuts"
                         android:textColor="@color/black"
-                        android:textSize="20dp"
+                        android:textSize="22dp"
                         android:textStyle="bold" />
 
                     <ImageView
+                        android:id="@+id/imgv_shorcuts_more"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -431,62 +452,64 @@
                 </RelativeLayout>
 
                 <androidx.cardview.widget.CardView
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     app:cardCornerRadius="10dp">
 
                     <LinearLayout
+                        android:gravity="center"
+                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:gravity="center"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/shortcuts" />
-
+                            android:src="@drawable/shortcuts"/>
                         <TextView
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="The things you need, one tap away"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
+                            />
 
                         <TextView
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:text="Fast access to your lists of Issues, Pull Requests, or Discussions."
+                            android:textSize="15dp"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="15dp" />
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:text="Fast access to your lists of Issues, Pull Requests, or Discussions."
+                            />
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="10dp">
-
                             <FrameLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/border_box">
+                                android:background="@drawable/border_box"
+                                >
 
                                 <TextView
+                                    android:id="@+id/tv_get_started"
+                                    android:selectAllOnFocus="false"
+                                    android:linksClickable="false"
+                                    android:autoLink="all"
+                                    android:layout_margin="10dp"
+                                    android:layout_gravity="center"
+                                    android:textStyle="bold"
+                                    android:textColor="#2963CD"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="10dp"
-                                    android:autoLink="all"
-                                    android:linksClickable="false"
-                                    android:selectAllOnFocus="false"
-                                    android:text="@string/your_text_reference2"
-                                    android:textColor="#2963CD"
-                                    android:textStyle="bold" />
+                                    android:text="@string/your_text_reference2"/>
 
                             </FrameLayout>
                         </androidx.cardview.widget.CardView>
@@ -497,25 +520,23 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
                     android:text="Recent"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="22dp"
                     android:textStyle="bold" />
 
                 <ImageView
+                    android:id="@+id/imgv_recent_more"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -528,53 +549,51 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:cardCornerRadius="10dp">
-
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     android:background="#FEFEFE"
                     android:orientation="vertical">
 
 
                     <LinearLayout
+                        android:id="@+id/recent1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentBottom="true"
-                            android:src="@mipmap/ic_launcher" />
+                            android:layout_alignParentStart="true"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/home_recent"/>
 
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
                             android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="sbn121/sfdafdassfdasfda #4" />
+                                android:text="sbn121/sfdafdassfdasfda #4"/>
 
+                            <TextView
+                                android:textStyle="bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="ㅇㅇㅇ"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="ㅇㅇㅇ"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="you created" />
+                                android:text="you created"/>
 
                         </LinearLayout>
 
@@ -587,48 +606,46 @@
 
 
                     </LinearLayout>
-
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#EEEFF3" />
-
+                        android:background="#EEEFF3"/>
                     <LinearLayout
+                        android:id="@+id/recent2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentBottom="true"
-                            android:src="@mipmap/ic_launcher" />
+                            android:layout_alignParentStart="true"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/home_recent"/>
 
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
                             android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="sbn121/sfdafdassfdasfda #4" />
+                                android:text="sbn121/sfdafdassfdasfda #4"/>
 
+                            <TextView
+                                android:textStyle="bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="ㅇㅇㅇ"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="ㅇㅇㅇ"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="you created" />
+                                android:text="you created"/>
 
                         </LinearLayout>
 
@@ -641,48 +658,46 @@
 
 
                     </LinearLayout>
-
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#EEEFF3" />
-
+                        android:background="#EEEFF3"/>
                     <LinearLayout
+                        android:id="@+id/recent3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentBottom="true"
-                            android:src="@mipmap/ic_launcher" />
+                            android:layout_alignParentStart="true"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/home_recent"/>
 
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
                             android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="sbn121/sfdafdassfdasfda #4" />
+                                android:text="sbn121/sfdafdassfdasfda #4"/>
 
+                            <TextView
+                                android:textStyle="bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="ㅇㅇㅇ"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="ㅇㅇㅇ"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="you created" />
+                                android:text="you created"/>
 
                         </LinearLayout>
 
@@ -698,8 +713,7 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+        </LinearLayout>
