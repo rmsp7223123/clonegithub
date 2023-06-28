@@ -23,9 +23,6 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     FragmentManager manager = getSupportFragmentManager();
 
-    ActivityMainBinding binding;
-    FragmentManager manager = getSupportFragmentManager();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
