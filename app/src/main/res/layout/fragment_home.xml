@@ -32,21 +32,28 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_margin="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
                         android:text="Home"
                         android:textColor="@color/black"
                         android:textSize="30dp"
                         android:textStyle="bold" />
+
                     <ImageView
-                        android:layout_margin="10dp"
-                        android:layout_alignParentTop="true"
+                        android:id="@+id/imgv_plus"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/home_plus"
-                        android:layout_alignParentEnd="true"/>
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/home_plus" />
 
                 </RelativeLayout>
                 <androidx.appcompat.widget.SearchView
+                    android:id="@+id/sv_search"
                     android:layout_margin="10dp"
                     android:background="#EAEAEA"
                     android:layout_width="match_parent"
@@ -72,6 +79,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
+                        android:id="@+id/imgv_more"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -93,6 +101,7 @@
                         android:orientation="vertical">
 
                         <RelativeLayout
+                            android:id="@+id/issues"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -132,6 +141,7 @@
                             android:background="#EEEFF3" />
 
                         <RelativeLayout
+                            android:id="@+id/pull_requests"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -173,6 +183,7 @@
                             android:background="#EEEFF3" />
 
                         <RelativeLayout
+                            android:id="@+id/discussions"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -214,6 +225,7 @@
                             android:background="#EEEFF3" />
 
                         <RelativeLayout
+                            android:id="@+id/repositories"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -255,6 +267,7 @@
                             android:layout_height="1dp"
                             android:background="#EEEFF3" />
                         <RelativeLayout
+                            android:id="@+id/organizations"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -296,6 +309,7 @@
                             android:background="#EEEFF3" />
 
                         <RelativeLayout
+                            android:id="@+id/starred"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_margin="10dp">
@@ -351,6 +365,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
+                        android:id="@+id/imgv_favorites_more"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -394,6 +409,7 @@
                                 >
 
                                 <TextView
+                                    android:id="@+id/tv_add_favorites"
                                     android:layout_margin="10dp"
                                     android:layout_gravity="center"
                                     android:textStyle="bold"
@@ -425,6 +441,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
+                        android:id="@+id/imgv_shorcuts_more"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -482,6 +499,7 @@
                                 >
 
                                 <TextView
+                                    android:id="@+id/tv_get_started"
                                     android:selectAllOnFocus="false"
                                     android:linksClickable="false"
                                     android:autoLink="all"
@@ -518,6 +536,7 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    android:id="@+id/imgv_recent_more"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -540,6 +559,7 @@
 
 
                     <LinearLayout
+                        android:id="@+id/recent1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -591,6 +611,7 @@
                         android:layout_height="1dp"
                         android:background="#EEEFF3"/>
                     <LinearLayout
+                        android:id="@+id/recent2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -642,6 +663,7 @@
                         android:layout_height="1dp"
                         android:background="#EEEFF3"/>
                     <LinearLayout
+                        android:id="@+id/recent3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -691,3 +713,7 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+        </LinearLayout>
