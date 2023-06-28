@@ -11,33 +11,32 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.example.myapplication.Home.HomeFragment;
 import com.example.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    FragmentManager manager;
+    FragmentManager manager = getSupportFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getSupportActionBar().hide();
+        new HideActionBar().hideActionBar(this);
 
-        Window window = getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-        window.setStatusBarColor(Color.TRANSPARENT);
-        View view = getWindow().getDecorView();
-        view.setSystemUiVisibility(view.getSystemUiVisibility() & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        // 메인 액티비티 기본 화면 Home
+        manager.beginTransaction().replace(R.id.container_linear, new HomeFragment()).commit();
+
 
         // 네비바 클릭시 프래그먼트 전환
         binding.bottomNav.setOnItemSelectedListener(item -> {
             Fragment fragment = null;
             if (item.getItemId() == R.id.home) {
-//                fragment = new
+                fragment = new HomeFragment();
             } else if (item.getItemId() == R.id.notifications) {
-
+                //fragment = new HomeFragment();
             } else if (item.getItemId() == R.id.notifications) {
 
             } else if (item.getItemId() == R.id.notifications) {
@@ -48,8 +47,9 @@ public class MainActivity extends AppCompatActivity {
             if (fragment == null) {
                 Toast.makeText(this, "빈공간", Toast.LENGTH_SHORT).show();
             } else {
-                manager.beginTransaction().replace(R.id.)
+                manager.beginTransaction().replace(R.id.container_linear, fragment).commit();
             }
+            return true;
         });
 
 
