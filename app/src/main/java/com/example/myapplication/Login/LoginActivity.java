@@ -31,8 +31,11 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         });
         binding.btnLogin.setOnClickListener(v -> {
+            // 확인용 임시 DTO 추가
             RegisterActivity.list.add(new AccountDTO("123","123","123","123"));
             intent = new Intent(LoginActivity.this, MainActivity.class);
+
+            // 아이디 비밀번호 검증용
             boolean isDuplicate = false;
             for (int i = 0; i < RegisterActivity.list.size(); i++) {
                 if (binding.edtId.getText().toString().equals(RegisterActivity.list.get(i).getUser_id()) &&
