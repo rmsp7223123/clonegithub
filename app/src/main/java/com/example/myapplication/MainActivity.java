@@ -9,41 +9,49 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
+import com.example.myapplication.Home.HomeFragment;
 import com.example.myapplication.databinding.ActivityMainBinding;
 import com.example.myapplication.profile.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    FragmentManager manager = getSupportFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getSupportActionBar().hide();
-        FragmentManager manager = getSupportFragmentManager();
-        binding.container.removeAllViews(); // 홈에 있는 메뉴가 Fragment 가 아니여서 임시로 해둠 2023-06-27.
-        manager.beginTransaction().replace(R.id.container, new ProfileFragment()).commit();
+        new HideActionBar().hideActionBar(this);
 
-        binding.btmMenu.setOnItemSelectedListener(item -> {
+        // 메인 액티비티 기본 화면 Home
+        manager.beginTransaction().replace(R.id.container_linear, new HomeFragment()).commit();
+
+
+        // 네비바 클릭시 프래그먼트 전환
+        binding.bottomNav.setOnItemSelectedListener(item -> {
             Fragment fragment = null;
-            if(item.getItemId()==R.id.menu4){
-                fragment = new ProfileFragment();
+            if (item.getItemId() == R.id.home) {
+                fragment = new HomeFragment();
+            } else if (item.getItemId() == R.id.notifications) {
+                //fragment = new HomeFragment();
+            } else if (item.getItemId() == R.id.notifications) {
 
+            } else if (item.getItemId() == R.id.notifications) {
+
+            } else {
+                return false;
             }
-
+            if (fragment == null) {
+                Toast.makeText(this, "빈공간", Toast.LENGTH_SHORT).show();
+            } else {
+                manager.beginTransaction().replace(R.id.container_linear, fragment).commit();
+            }
             return true;
         });
-
-
-
-        Window window =getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-        window.setStatusBarColor(Color.TRANSPARENT);
-        View view = getWindow().getDecorView();
-        view.setSystemUiVisibility(view.getSystemUiVisibility() & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
 
     }
