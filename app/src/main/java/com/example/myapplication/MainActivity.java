@@ -16,7 +16,12 @@ import com.example.myapplication.Home.HomeFragment;
 import com.example.myapplication.Notifications.NotificationsFragment;
 import com.example.myapplication.databinding.ActivityMainBinding;
 
+import com.example.myapplication.Notifications.NotificationsFragment;
+import com.example.myapplication.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
+    ActivityMainBinding binding;
+    FragmentManager manager = getSupportFragmentManager();
 
     ActivityMainBinding binding;
     FragmentManager manager = getSupportFragmentManager();
