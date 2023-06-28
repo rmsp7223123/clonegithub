@@ -36,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
             intent = new Intent(LoginActivity.this, MainActivity.class);
 
             // 아이디 비밀번호 검증용
+            startActivity(intent);
             boolean isDuplicate = false;
             for (int i = 0; i < RegisterActivity.list.size(); i++) {
                 if (binding.edtId.getText().toString().equals(RegisterActivity.list.get(i).getUser_id()) &&
@@ -45,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
             if (isDuplicate) {
-                startActivity(intent);
+
             } else {
                 Toast.makeText(this, "존재하지 않은 아이디이거나 비밀번호가 틀렸습니다.", Toast.LENGTH_SHORT).show();
             }

@@ -18,6 +18,7 @@ import com.example.myapplication.databinding.ActivityMainBinding;
 
 import com.example.myapplication.Notifications.NotificationsFragment;
 import com.example.myapplication.databinding.ActivityMainBinding;
+import com.example.myapplication.profile.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.explore) {
                 fragment = new ExploreFragment();
             } else if (item.getItemId() == R.id.profile) {
-
+                fragment = new ProfileFragment();
             } else {
                 return false;
             }
