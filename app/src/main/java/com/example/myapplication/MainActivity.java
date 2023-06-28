@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 //fragment = new HomeFragment();
             } else if (item.getItemId() == R.id.notifications) {
 
-            } else if (item.getItemId() == R.id.notifications) {
-
+            } else if (item.getItemId() == R.id.profile) {
+                fragment = new ProfileFragment();
             } else {
                 return false;
             }
