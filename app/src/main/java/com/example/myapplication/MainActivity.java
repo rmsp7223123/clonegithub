@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.myapplication.Explore.ExploreFragment;
 import com.example.myapplication.Home.HomeFragment;
+import com.example.myapplication.Notifications.NotificationsFragment;
 import com.example.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             if (item.getItemId() == R.id.home) {
                 fragment = new HomeFragment();
             } else if (item.getItemId() == R.id.notifications) {
-                //fragment = new HomeFragment();
+                fragment = new NotificationsFragment();
             } else if (item.getItemId() == R.id.explore) {
                 fragment = new ExploreFragment();
             } else if (item.getItemId() == R.id.profile) {
