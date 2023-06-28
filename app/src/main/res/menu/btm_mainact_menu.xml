@@ -4,23 +4,23 @@
     <item
         android:id="@+id/menu1"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
-        app:showAsAction="ifRoom"
-        android:title=""/>
+        android:icon="@drawable/nav_home"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu2"
-        android:icon="@drawable/ic_launcher_background"
-        app:showAsAction="ifRoom"
-        android:title=""/>
+        android:icon="@drawable/nav_notifications"
+        android:title="Notifications"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu3"
-        android:icon="@drawable/ic_launcher_foreground"
-        app:showAsAction="ifRoom"
-        android:title=""/>
+        android:icon="@drawable/nav_explore"
+        android:title="Explore"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu4"
-        android:icon="@drawable/ic_launcher_background"
-        app:showAsAction="ifRoom"
-        android:title=""/>
+        android:icon="@drawable/nav_profile"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
 
 </menu>
