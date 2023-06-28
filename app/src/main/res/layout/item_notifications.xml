@@ -1,59 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Notifications.NotificationsFragment"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="20dp">
+    android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/notifications"
-            android:layout_gravity="center"/>
+            android:src="@drawable/polyline"/>
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Customize your notification
-                          experience"
-            android:textSize="20dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center" />
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rmsp7223123/VendingMachineTeamProject #9"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수량 변경"/>
+            <TextView
+                android:drawableLeft="@drawable/drawble_left_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Merged #9 into main."/>
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Set up new push notifications, working hours,
-                          and customize swipe options."
-            android:layout_marginTop="10dp"
-            android:gravity="center"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CUSTOMIZE YOUR EXPERIENCE"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LATER"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
     </LinearLayout>
 
-
-</androidx.core.widget.NestedScrollView>
+</LinearLayout>
