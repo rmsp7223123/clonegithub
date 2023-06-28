@@ -2,4 +2,9 @@
     <string name="app_name">My Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="your_text_reference1"><u>Add Favorites</u></string>
+
+    <string name="your_text_reference2"><u>Get started</u></string>
+
 </resources>
