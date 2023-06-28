@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HideActionBar {
 
+    // 액션바를 숨기기 위한 메소드 추가
     public void hideActionBar(AppCompatActivity activity) {
         activity.getSupportActionBar().hide();
 

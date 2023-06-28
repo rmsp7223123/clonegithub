@@ -38,6 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
             intent = new Intent(RegisterActivity.this, StartActivity.class);
             String userid = binding.edtId.getText().toString();
 
+            // 아이디 비밀번호 중복 및 확인 추가
             boolean isDuplicate = false;
             for (int i = 0; i < list.size(); i++) {
                 AccountDTO account = list.get(i);

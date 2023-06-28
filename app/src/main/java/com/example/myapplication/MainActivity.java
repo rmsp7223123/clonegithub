@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.example.myapplication.Explore.ExploreFragment;
 import com.example.myapplication.Home.HomeFragment;
 import com.example.myapplication.databinding.ActivityMainBinding;
 
@@ -37,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new HomeFragment();
             } else if (item.getItemId() == R.id.notifications) {
                 //fragment = new HomeFragment();
-            } else if (item.getItemId() == R.id.notifications) {
-
-            } else if (item.getItemId() == R.id.notifications) {
+            } else if (item.getItemId() == R.id.explore) {
+                fragment = new ExploreFragment();
+            } else if (item.getItemId() == R.id.profile) {
 
             } else {
                 return false;
