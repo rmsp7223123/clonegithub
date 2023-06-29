@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.databinding.FragmentHomeBinding;
 
@@ -30,7 +31,8 @@ public class HomeFragment extends Fragment {
             startActivity(new Intent(this.getContext(), HomeMoreActivity.class));
         });
         binding.issues.setOnClickListener(v -> {
-            startActivity(new Intent(this.getContext(), HomeIssuesActivity.class));
+            MainActivity ma = (MainActivity) getActivity();
+            ma.changeFrag(new HomeIssuesFragment());
         });
 
         return binding.getRoot();

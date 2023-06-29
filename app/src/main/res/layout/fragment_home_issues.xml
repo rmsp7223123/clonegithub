@@ -51,14 +51,13 @@
         app:iconifiedByDefault="false"
         app:queryHint="Search"
         />
-
     <com.google.android.material.chip.ChipGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         >
-
         <com.google.android.material.chip.Chip
+            android:textSize="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Open"
@@ -66,8 +65,11 @@
             android:textStyle="bold"
             app:chipIcon="@drawable/baseline_keyboard_arrow_down_24"
             app:chipIconEnabled="true"
+            android:layoutDirection="rtl"
             />
         <com.google.android.material.chip.Chip
+            android:textSize="10dp"
+            android:layoutDirection="rtl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Created"
@@ -77,6 +79,8 @@
             app:chipIconEnabled="true"
             />
         <com.google.android.material.chip.Chip
+            android:layoutDirection="rtl"
+            android:textSize="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Visibility"
@@ -86,6 +90,8 @@
             app:chipIconEnabled="true"
             />
         <com.google.android.material.chip.Chip
+            android:layoutDirection="rtl"
+            android:textSize="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Oragnization"
@@ -96,7 +102,6 @@
             />
 
     </com.google.android.material.chip.ChipGroup>
-
     <LinearLayout
         android:paddingVertical="40dp"
         android:layout_width="match_parent"

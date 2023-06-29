@@ -59,4 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void changeFrag(Fragment fragment){
+        manager.beginTransaction().replace(R.id.container_linear, fragment).commit();
+    }
+
 }
